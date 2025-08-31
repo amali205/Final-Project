@@ -90,3 +90,12 @@ POST /api/orders/ → Place order from cart
 GET /api/orders/ → View user’s orders
 
 GET /api/orders/all/ (Admin only) → View all orders
+
+
+
+
+
+
+
+
+## I used Ai to help me in create this project 
