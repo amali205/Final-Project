@@ -3,7 +3,7 @@ from .models import Order
 from .serializers import OrderSerializer
 
 class IsOwnerOrAdmin(permissions.BasePermission):
-    def has_object_permission(self, request, view, obj):
+    def has_object_permission(self, request, obj):
         return obj.user == request.user or request.user.is_staff
 
 class OrderViewSet(viewsets.ModelViewSet):

@@ -12,13 +12,11 @@ class IsAdminOrReadOnly(permissions.BasePermission):
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    lookup_field = "slug"
     permission_classes = [IsAdminOrReadOnly]   # 🔐
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    lookup_field = "slug"
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ["name", "description"]
     ordering_fields = ["price", "created_at"]
