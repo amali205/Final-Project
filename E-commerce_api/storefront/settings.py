@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'am8899$default',
         'USER': 'am8899',
         'PASSWORD': os.environ.get('MYSQL_PASSWORD'),
-        'HOST': '127.0.0.1',   # ✅ use localhost on free accounts
+        'HOST': 'am8899.mysql.pythonanywhere-services.com',   # ✅ use localhost on free accounts
         'PORT': '3306',
     }
 }
