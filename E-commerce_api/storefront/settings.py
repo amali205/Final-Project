@@ -17,7 +17,9 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-insecure-key")  # override
 DEBUG = os.environ.get("DJANGO_DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = ["am8899.pythonanywhere.com"]
-CSRF_TRUSTED_ORIGINS = ["https:am8899.pythonanywhere.com"]
+CSRF_TRUSTED_ORIGINS = [
+    'https://am8899.pythonanywhere.com'
+]
 
 # Static files
 STATIC_URL = "/static/"
