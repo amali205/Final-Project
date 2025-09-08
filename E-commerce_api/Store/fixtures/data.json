@@ -1,0 +1,451 @@
+[
+  {
+    "model": "Store.customer",
+    "pk": 1,
+    "fields": {
+      "first_name": "Ahmed",
+      "last_name": "Ali",
+      "email": "ahmed.ali@example.com",
+      "phone": "01012345678",
+      "birth_date": "1995-07-22",
+      "membership": "B"
+    }
+  },
+  {
+    "model": "Store.customer",
+    "pk": 2,
+    "fields": {
+      "first_name": "Sara",
+      "last_name": "Hassan",
+      "email": "sara.hassan@example.com",
+      "phone": "01087654321",
+      "birth_date": "1998-05-10",
+      "membership": "S"
+    }
+  },
+  {
+    "model": "Store.customer",
+    "pk": 3,
+    "fields": {
+      "first_name": "Mohamed",
+      "last_name": "Youssef",
+      "email": "mohamed.youssef@example.com",
+      "phone": "01023456789",
+      "birth_date": "1992-03-15",
+      "membership": "G"
+    }
+  },
+  {
+    "model": "Store.customer",
+    "pk": 4,
+    "fields": {
+      "first_name": "Laila",
+      "last_name": "Omar",
+      "email": "laila.omar@example.com",
+      "phone": "01056789123",
+      "birth_date": "1997-11-02",
+      "membership": "B"
+    }
+  },
+  {
+    "model": "Store.customer",
+    "pk": 5,
+    "fields": {
+      "first_name": "Hossam",
+      "last_name": "Khaled",
+      "email": "hossam.khaled@example.com",
+      "phone": "01034567890",
+      "birth_date": "1989-06-20",
+      "membership": "S"
+    }
+  },
+  {
+    "model": "Store.customer",
+    "pk": 6,
+    "fields": {
+      "first_name": "Nora",
+      "last_name": "Adel",
+      "email": "nora.adel@example.com",
+      "phone": "01099887766",
+      "birth_date": "1993-01-10",
+      "membership": "G"
+    }
+  },
+  {
+    "model": "Store.customer",
+    "pk": 7,
+    "fields": {
+      "first_name": "Youssef",
+      "last_name": "Mansour",
+      "email": "youssef.mansour@example.com",
+      "phone": "01022334455",
+      "birth_date": "1999-04-18",
+      "membership": "B"
+    }
+  },
+  {
+    "model": "Store.customer",
+    "pk": 8,
+    "fields": {
+      "first_name": "Mona",
+      "last_name": "Said",
+      "email": "mona.said@example.com",
+      "phone": "01011223344",
+      "birth_date": "1990-08-25",
+      "membership": "S"
+    }
+  },
+  {
+    "model": "Store.customer",
+    "pk": 9,
+    "fields": {
+      "first_name": "Omar",
+      "last_name": "Fathi",
+      "email": "omar.fathi@example.com",
+      "phone": "01033445566",
+      "birth_date": "1987-12-30",
+      "membership": "G"
+    }
+  },
+  {
+    "model": "Store.customer",
+    "pk": 10,
+    "fields": {
+      "first_name": "Reem",
+      "last_name": "Mostafa",
+      "email": "reem.mostafa@example.com",
+      "phone": "01066778899",
+      "birth_date": "1996-09-14",
+      "membership": "B"
+    }
+  },
+
+{
+  "model": "Store.collection",
+  "pk": 1,
+  "fields": { "title": "Electronics" }
+},
+{
+  "model": "Store.collection",
+  "pk": 2,
+  "fields": { "title": "Clothing" }
+},
+{
+  "model": "Store.collection",
+  "pk": 3,
+  "fields": { "title": "Books" }
+},
+{
+  "model": "Store.collection",
+  "pk": 4,
+  "fields": { "title": "Sports" }
+},
+{
+  "model": "Store.collection",
+  "pk": 5,
+  "fields": { "title": "Home" }
+},
+{
+  "model": "Store.product",
+  "pk": 1,
+  "fields": {
+    "title": "Laptop",
+    "description": "High-performance laptop",
+    "price": "899.99",
+    "inventory": 15,
+    "collection": 1,
+    "last_update": "2025-01-05T10:00:00Z",
+    "slug": "laptop",
+    "promtions": [1]
+  }
+},
+{
+  "model": "Store.product",
+  "pk": 2,
+  "fields": {
+    "title": "Smartphone",
+    "description": "Latest 5G smartphone",
+    "price": "699.99",
+    "inventory": 30,
+    "collection": 1,
+    "last_update": "2025-01-06T11:30:00Z",
+    "slug": "smartphone",
+    "promtions": [2]
+  }
+},
+{
+  "model": "Store.product",
+  "pk": 3,
+  "fields": {
+    "title": "T-Shirt",
+    "description": "Cotton T-shirt",
+    "price": "19.99",
+    "inventory": 100,
+    "collection": 2,
+    "last_update": "2025-01-07T09:15:00Z",
+    "slug": "t-shirt",
+    "promtions": [3]
+  }
+},
+{
+  "model": "Store.product",
+  "pk": 4,
+  "fields": {
+    "title": "Jeans",
+    "description": "Blue denim jeans",
+    "price": "49.99",
+    "inventory": 50,
+    "collection": 2,
+    "last_update": "2025-01-08T13:45:00Z",
+    "slug": "jeans",
+    "promtions": [4]
+  }
+},
+{
+  "model": "Store.product",
+  "pk": 5,
+  "fields": {
+    "title": "Novel",
+    "description": "Bestselling fiction novel",
+    "price": "14.99",
+    "inventory": 200,
+    "collection": 3,
+    "last_update": "2025-01-09T15:20:00Z",
+    "slug": "novel",
+    "promtions": [5]
+  }
+},
+{
+  "model": "Store.product",
+  "pk": 6,
+  "fields": {
+    "title": "Cookbook",
+    "description": "Delicious recipes",
+    "price": "24.99",
+    "inventory": 60,
+    "collection": 3,
+    "last_update": "2025-01-10T16:40:00Z",
+    "slug": "cookbook",
+    "promtions": [1]
+  }
+},
+{
+  "model": "Store.product",
+  "pk": 7,
+  "fields": {
+    "title": "Football",
+    "description": "Official size football",
+    "price": "29.99",
+    "inventory": 40,
+    "collection": 4,
+    "last_update": "2025-01-11T14:30:00Z",
+    "slug": "football",
+    "promtions": [2]
+  }
+},
+{
+  "model": "Store.product",
+  "pk": 8,
+  "fields": {
+    "title": "Tennis Racket",
+    "description": "Professional tennis racket",
+    "price": "79.99",
+    "inventory": 20,
+    "collection": 4,
+    "last_update": "2025-01-12T18:00:00Z",
+    "slug": "tennis-racket",
+    "promtions": [3]
+  }
+},
+{
+  "model": "Store.product",
+  "pk": 9,
+  "fields": {
+    "title": "Vacuum Cleaner",
+    "description": "High power vacuum cleaner",
+    "price": "149.99",
+    "inventory": 25,
+    "collection": 5,
+    "last_update": "2025-01-13T09:00:00Z",
+    "slug": "vacuum-cleaner",
+    "promtions": [4]
+  }
+},
+{
+  "model": "Store.product",
+  "pk": 10,
+  "fields": {
+    "title": "Sofa",
+    "description": "Comfortable sofa",
+    "price": "499.99",
+    "inventory": 10,
+    "collection": 5,
+    "last_update": "2025-01-14T12:00:00Z",
+    "slug": "sofa",
+    "promtions": [5]
+  }
+},
+{
+  "model": "Store.product",
+  "pk": 11,
+  "fields": {
+    "title": "Headphones",
+    "description": "Noise-cancelling headphones",
+    "price": "129.99",
+    "inventory": 35,
+    "collection": 1,
+    "last_update": "2025-01-15T10:30:00Z",
+    "slug": "headphones",
+    "promtions": [1]
+  }
+},
+{
+  "model": "Store.product",
+  "pk": 12,
+  "fields": {
+    "title": "Sneakers",
+    "description": "Comfortable running sneakers",
+    "price": "89.99",
+    "inventory": 60,
+    "collection": 2,
+    "last_update": "2025-01-16T11:10:00Z",
+    "slug": "sneakers",
+    "promtions": [2]
+  }
+},
+{
+  "model": "Store.product",
+  "pk": 13,
+  "fields": {
+    "title": "Biography",
+    "description": "Inspirational life story",
+    "price": "18.99",
+    "inventory": 120,
+    "collection": 3,
+    "last_update": "2025-01-17T09:50:00Z",
+    "slug": "biography",
+    "promtions": [3]
+  }
+},
+{
+  "model": "Store.product",
+  "pk": 14,
+  "fields": {
+    "title": "Basketball",
+    "description": "Indoor/outdoor basketball",
+    "price": "34.99",
+    "inventory": 45,
+    "collection": 4,
+    "last_update": "2025-01-18T13:20:00Z",
+    "slug": "basketball",
+    "promtions": [4]
+  }
+},
+{
+  "model": "Store.product",
+  "pk": 15,
+  "fields": {
+    "title": "Coffee Maker",
+    "description": "Automatic coffee brewing machine",
+    "price": "79.99",
+    "inventory": 22,
+    "collection": 5,
+    "last_update": "2025-01-19T16:45:00Z",
+    "slug": "coffee-maker",
+    "promtions": [5]
+  }
+},
+{
+  "model": "Store.Address",
+  "pk": 1,
+  "fields": { "street": "123 Main St", "city": "Cairo", "customer": 1 }
+},
+{
+  "model": "Store.Address",
+  "pk": 2,
+  "fields": { "street": "456 Nile Ave", "city": "Giza", "customer": 2 }
+},
+{
+  "model": "Store.Address",
+  "pk": 3,
+  "fields": { "street": "789 Pyramids Rd", "city": "Giza", "customer": 3 }
+},
+{
+  "model": "Store.Address",
+  "pk": 4,
+  "fields": { "street": "321 Tahrir Sq", "city": "Cairo", "customer": 4 }
+},
+{
+  "model": "Store.Address",
+  "pk": 5,
+  "fields": { "street": "654 Garden City", "city": "Cairo", "customer": 5 }
+},
+{
+  "model": "Store.Address",
+  "pk": 6,
+  "fields": { "street": "987 Corniche", "city": "Alexandria", "customer": 6 }
+},
+{
+  "model": "Store.Address",
+  "pk": 7,
+  "fields": { "street": "246 Stanley St", "city": "Alexandria", "customer": 7 }
+},
+{
+  "model": "Store.Address",
+  "pk": 8,
+  "fields": { "street": "135 Montaza Rd", "city": "Alexandria", "customer": 8 }
+},
+{
+  "model": "Store.Address",
+  "pk": 9,
+  "fields": { "street": "864 Downtown", "city": "Cairo", "customer": 9 }
+},
+{
+  "model": "Store.Address",
+  "pk": 10,
+  "fields": { "street": "753 Zamalek", "city": "Cairo", "customer": 10 }
+},
+{
+  "model": "Store.order",
+  "pk": 1,
+  "fields": { "placed_at": "2025-02-01T12:00:00Z", "payment_status": "P", "customer": 1 }
+},
+{
+  "model": "Store.orderitem",
+  "pk": 1,
+  "fields": { "order": 1, "product": 1, "quantity": 1, "unit_price": "899.99" }
+},
+{
+  "model": "Store.order",
+  "pk": 2,
+  "fields": { "placed_at": "2025-02-02T15:30:00Z", "payment_status": "C", "customer": 2 }
+},
+{
+  "model": "Store.orderitem",
+  "pk": 2,
+  "fields": { "order": 2, "product": 2, "quantity": 2, "unit_price": "699.99" }
+},
+{
+  "model": "Store.order",
+  "pk": 3,
+  "fields": { "placed_at": "2025-02-03T11:20:00Z", "payment_status": "P", "customer": 3 }
+},
+{
+  "model": "Store.orderitem",
+  "pk": 3,
+  "fields": { "order": 3, "product": 3, "quantity": 3, "unit_price": "19.99" }
+},
+{
+  "model": "Store.order",
+  "pk": 4,
+  "fields": { "placed_at": "2025-02-04T09:45:00Z", "payment_status": "C", "customer": 4 }
+},
+{
+  "model": "Store.orderitem",
+  "pk": 4,
+  "fields": { "order": 4, "product": 5, "quantity": 2, "unit_price": "14.99" }
+}
+]
+
+
+
