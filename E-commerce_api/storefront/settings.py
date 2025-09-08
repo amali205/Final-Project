@@ -83,10 +83,10 @@ import os
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'am8899$default',
-        'USER': 'am8899',
+        'NAME': 'am1020$default',
+        'USER': 'am1020',
         'PASSWORD': os.environ.get('MYSQL_PASSWORD'),
-        'HOST': 'am8899.mysql.pythonanywhere-services.com',   # ✅ use localhost on free accounts
+        'HOST': 'am1020.mysql.pythonanywhere-services.com',   # ✅ use localhost on free accounts
         'PORT': '3306',
     }
 }
