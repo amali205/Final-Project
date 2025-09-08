@@ -79,13 +79,15 @@ WSGI_APPLICATION = 'storefront.wsgi.application'
 
 
 
+import os
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'storefront',
-        'USER': 'root',
-        'PASSWORD': 'a0000',  # use the root password you set
-        'HOST': '127.0.0.1',
+        'NAME': 'am8899$default',   # your database name
+        'USER': 'am8899',           # your PythonAnywhere username
+        'PASSWORD': os.environ.get('MYSQL_PASSWORD'),  # stored securely
+        'HOST': 'am8899.mysql.pythonanywhere-services.com',  # not 127.0.0.1
         'PORT': '3306',
     }
 }
