@@ -9,32 +9,26 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-
+import os
 from pathlib import Path
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-insecure-key")  # override in PA env
+DEBUG = os.environ.get("DJANGO_DEBUG", "False") == "True"
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
+ALLOWED_HOSTS = ["am8899.pythonanywhere.com"]
+CSRF_TRUSTED_ORIGINS = ["https:am8899.pythonanywhere.com"]
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-65#4gsxl+dl4yglwa@vwv493^q@puv*-@ogv#2k35ooxg%e)7i'
+# Static files
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "staticfiles" 
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'Store',
-    # 'likes',
-    # 'Tags',
-    # 'playground',
     'core',
     'rest_framework',
     'djoser',
@@ -126,22 +120,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
-
-import os
-from pathlib import Path
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-# Static files (CSS, JS, Images)
-STATIC_URL = '/static/'
-
-# Where collectstatic will copy all static files
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
 
 
 
