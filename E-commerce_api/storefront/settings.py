@@ -82,12 +82,8 @@ import os
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'am1020$default',
-        'USER': 'am1020',
-        'PASSWORD': 'AAaa00@@',
-        'HOST': 'am1020.mysql.pythonanywhere-services.com',   # ✅ use localhost on free accounts
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
