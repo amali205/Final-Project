@@ -1,4 +1,4 @@
-from .serilalizers import AddCartItemSerializer, CreateOrderSerializer,cartItemSerializer, ProductSerializer, CollectionSerializer, CustomerSerializer, OrderSerializer, CartSerializer
+from .serilalizers import AddCartItemSerializer, CreateOrderSerializer,CartItemSerializer, ProductSerializer, CollectionSerializer, CustomerSerializer, OrderSerializer, CartSerializer
 from rest_framework import viewsets , status
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -33,19 +33,22 @@ class CustomerViewSet(viewsets.ModelViewSet):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
     permission_classes = [IsAdminUser]
-   
 
-    @action(detail=True , methods=['GET' , 'PUT'] , permission_classes=[IsAuthenticated]) 
-    def me(self, request , pk=None):
-        customer = Customer.objects.get(user_id=request.user.id)
+    @action(detail=True, methods=['GET', 'PUT'], permission_classes=[IsAuthenticated])
+    def me(self, request, pk=None):
+        # Correctly unpack get_or_create
+        customer, created = Customer.objects.get_or_create(user=request.user)
+
         if request.method == 'GET':
-         serializer = self.get_serializer(customer)
-         return Response(serializer.data)
+            serializer = self.get_serializer(customer)
+            return Response(serializer.data)
+
         elif request.method == 'PUT':
-            serializer = CustomerSerializer (customer , data=request.data)
+            serializer = CustomerSerializer(customer, data=request.data)
             serializer.is_valid(raise_exception=True)
             serializer.save()
             return Response(serializer.data)
+
 
 
 
@@ -79,9 +82,9 @@ class OrderViewSet(viewsets.ModelViewSet):
         user = self.request.user
         if user.is_staff:
             return Order.objects.all()
-        customer_id = Customer.objects.only('id').get(user_id=user.id)
-        return Order.objects.filter(customer_id=customer_id)
-
+        # Get the customer's ID for the logged-in user
+        customer = Customer.objects.only('id').get(user=user)
+        return Order.objects.filter(customer_id=customer.id)
 
 
 class CartViewSet(viewsets.ModelViewSet):
@@ -97,7 +100,7 @@ class CartItemViewSet(viewsets.ModelViewSet):
     def get_serializer_class(self):
         if self.request.method == 'POST':
             return AddCartItemSerializer   # for adding item
-        return cartItemSerializer          # for listing items
+        return CartItemSerializer         # for listing items
 
     def get_serializer_context(self):
         return {'cart_id': self.kwargs['cart_pk']}
