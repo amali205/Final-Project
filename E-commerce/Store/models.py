@@ -13,8 +13,8 @@ class Product (models.Model):
     title = models.CharField(max_length=20)
     description = models.TextField(max_length=500)
     price = models.DecimalField(decimal_places=2 , max_digits= 6 )
-    inventory = models.IntegerField()
-    collection = models.ForeignKey(Collection , on_delete= models.PROTECT , related_name='products')
+    inventory = models.IntegerField(null=True , blank=True)
+    collection = models.ForeignKey(Collection , on_delete= models.PROTECT , related_name='products' , null=True)
     last_update = models.DateTimeField(auto_now=True)
     slug = models.SlugField()                     # for SEOcls
     
